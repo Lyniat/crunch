@@ -230,7 +230,7 @@ int main(int argc, const char* argv[])
     optPadding = 1;
     optXml = false;
     optBinary = false;
-    optJson = false;
+    optJson = true; // set this always true for DR export
     optPremultiply = false;
     optTrim = false;
     optVerbose = false;
@@ -245,8 +245,8 @@ int main(int argc, const char* argv[])
             optXml = true;
         else if (arg == "-b" || arg == "--binary")
             optBinary = true;
-        else if (arg == "-j" || arg == "--json")
-            optJson = true;
+        //else if (arg == "-j" || arg == "--json")
+        //    optJson = true;
         else if (arg == "-p" || arg == "--premultiply")
             optPremultiply = true;
         else if (arg == "-t" || arg == "--trim")
@@ -315,7 +315,7 @@ int main(int argc, const char* argv[])
         cout << "options..." << endl;
         cout << "\t--xml: " << (optXml ? "true" : "false") << endl;
         cout << "\t--binary: " << (optBinary ? "true" : "false") << endl;
-        cout << "\t--json: " << (optJson ? "true" : "false") << endl;
+        //cout << "\t--json: " << (optJson ? "true" : "false") << endl;
         cout << "\t--premultiply: " << (optPremultiply ? "true" : "false") << endl;
         cout << "\t--trim: " << (optTrim ? "true" : "false") << endl;
         cout << "\t--verbose: " << (optVerbose ? "true" : "false") << endl;

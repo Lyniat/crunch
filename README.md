@@ -10,6 +10,7 @@ It is designed using libraries with permissible licenses, so you are able to use
 
 Made a fork to do following changes:
 - Replace VisualStudio solution with CMake
+- Set JSON export as default and add `w` and `h` attributes.
 - Add code for minimal example, how to use this with [DragonRuby](https://dragonruby.org/toolkit/game)
 
 ### Features
@@ -54,7 +55,7 @@ There is also an option to use a binary format instead of xml.
 
 For example...
 
-`crunch bin/atlases/atlas assets/characters,assets/tiles -p -t -v -u -r -j`
+`crunch bin/atlases/atlas assets/characters,assets/tiles -p -t -v -u -r`
 
 This will output the following files:
 
@@ -71,7 +72,6 @@ bin/atlases/atlas.hash
 | -d            | --default     | use default settings (-x -p -t -u)
 | -x            | --xml         | saves the atlas data as a .xml file
 | -b            | --binary      | saves the atlas data as a .bin file
-| -j            | --json        | saves the atlas data as a .json file
 | -p            | --premultiply | premultiplies the pixels of the bitmaps by their alpha channel
 | -t            | --trim        | trims excess transparency off the bitmaps
 | -v            | --verbose     | print to the debug console as the packer works
